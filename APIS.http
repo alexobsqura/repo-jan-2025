@@ -1,0 +1,65 @@
+###Get a list of all products
+GET http://localhost:8080/products
+
+### Create a product
+POST http://localhost:8080/products
+Content-Type: application/json
+
+{
+  "name": "Iphone 16",
+  "price": 1550
+}
+
+### GET a product by id
+GET http://localhost:8080/products/679c40e814faa6bdb674259b
+
+### Update a product by id
+PATCH  http://localhost:8080/products/679c40e814faa6bdb674259b
+Content-Type: application/json
+
+{
+  "price": 5999
+}
+
+
+### Delete a product by id
+DELETE  http://localhost:8080/products/679c40e814faa6bdb674259b
+
+### 404 route Not Found
+GET http://localhost:8080/abc_xyz
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#hrXWgw4Q127uqZJ3

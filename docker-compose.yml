@@ -11,7 +11,7 @@ services:
 
   # Node api service
   api:
-    build: .
+    build: ./backend
     ports:
       # local->container
       - 8080:8080
@@ -21,6 +21,18 @@ services:
       DB_NAME: sample-db
     depends_on: 
       - mongo_db
+  
+  # ui service
+  ui:
+    build: ./frontend
+    ports:
+      # local->container
+      - 9080:9080
+    environment:
+      PORT: 9080
+      API_URL: http://api:8080
+    depends_on: 
+      - api
 
 volumes:
   mongo_data: {}
