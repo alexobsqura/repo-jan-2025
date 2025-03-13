@@ -24,7 +24,7 @@ module.exports = () => {
   });
 
   mongoose.connection.on('disconnected', () => {
-    console.log('Mongoose connection is disconnected...');
+    console.log('Mongoose connection is disconnected ...');
   });
 
   process.on('SIGINT', () => {
